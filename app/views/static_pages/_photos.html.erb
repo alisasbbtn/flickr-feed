@@ -1,0 +1,9 @@
+<% photos.each do |row| %>
+  <% row.each do |photo| %>
+    <% info = flickr.photos.getInfo(photo_id: photo['id']) %>
+    <%= link_to(image_tag(FlickRaw.url_b(info), :class => 'flickr_photo',
+                                    :title => info['title'], :border => 0,
+                                    :size => '100x100'), FlickRaw.url_photopage(info), target: :_blank) %>
+    <% end %>
+  <br >
+<% end %>

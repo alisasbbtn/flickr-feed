@@ -1,0 +1,13 @@
+<%= form_tag home_path, method: :get do %>
+  <div class="form-group">
+    <h3><%= label_tag :flickr_user_id, 'Flickr ID' %>
+      <small>To find out what id the user has, try
+        <a href="https://www.webpagefx.com/tools/idgettr/" target="_blank">this</a>.</small>
+    </h3>
+    <%= text_field_tag :flickr_user_id, nil, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group text-center">
+    <%= submit_tag 'Search', class: 'btn btn-default' %>
+  </div>
+<% end %>
